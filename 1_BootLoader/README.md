@@ -7,4 +7,8 @@
 		<td>2.</td>
 		<td>Results in a 'A' being printed</td>
 	</tr>
+	<tr>
+		<td>3.</td>
+		<td>Prints 'Hello World!'</td>
+	</tr>
 </table>
