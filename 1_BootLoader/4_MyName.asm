@@ -24,11 +24,11 @@ RET
 PrintCharacter :
 MOV AH, 0x0E
 MOV BH, 0x00
-MOV BL, 0x09
+MOV BL, 0x0A
 INT 0x10
 RET
 
-HelloWorld db 'Hello World!', 0;
+HelloWorld db 'My name is Pratik Garai', 0;
 
 TIMES 510 - ($ - $$) db 0
 DW 0xAA55
