@@ -1,0 +1,23 @@
+[BITS 16]
+[ORG 0x7C00]
+
+MOV AX, 19
+INT 16
+
+CALL DrawBox
+JMP $
+
+DrawBox :
+MOV AH, 0x06
+MOV AL, 0
+MOV BH, 0x04
+MOV CH, 1
+MOV CL, 1
+MOV DH, 3
+MOV DL, 3
+INT 0x10
+RET
+
+
+TIMES 510 - ($ - $$) db 0
+DW 0xAA55

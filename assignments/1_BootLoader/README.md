@@ -15,4 +15,8 @@
 		<td>4.</td>
 		<td>Prints my name</td>
 	</tr>
+	<tr>
+		<td>5.</td>
+		<td>Draws a small rectangle on screen</td>
+	</tr>
 </table>
