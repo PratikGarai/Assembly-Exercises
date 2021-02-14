@@ -19,4 +19,8 @@
 		<td>5.</td>
 		<td>Draws a small rectangle on screen</td>
 	</tr>
+	<tr>
+		<td>6.</td>
+		<td>Draws a Rectangle with a black one inside to, to simluate an outlined rectangle</td>
+	</tr>
 </table>
