@@ -1,31 +1,28 @@
 [BITS 16]
 [ORG 0x7C00]
 
-MOV AX, 19
-INT 16
+MOV AX, 19 		; changing video mode to enable colors
+INT 16 			; calling interrupt
 CALL PrintString
-; MOV AX, 3
-; INT 16
 JMP $
 
-PrintString :
-MOV SI, HelloWorld
+PrintString : 
+MOV SI, HelloWorld 	; Move string to register
 
 nextcharacter :
-MOV AL, [SI]
-INC SI
-OR AL, AL
+LODSB 			; load next character into AL, increment SI
+OR AL, AL 		; check if end of string
 JZ exit_function
 CALL PrintCharacter
-JMP nextcharacter
-exit_function :
-RET
+JMP nextcharacter 	; write next character
+exit_function : 	
+RET 			; end of loop
 
 PrintCharacter :
-MOV AH, 0x0E
-MOV BH, 0x00
-MOV BL, 0x0A
-INT 0x10
+MOV AH, 0x0E 		; Teletype output
+MOV BH, 0x00 		; First Page
+MOV BL, 0x0A 		; Color : Greem
+INT 0x10 		; print a character
 RET
 
 HelloWorld db 'My name is Pratik Garai', 0;
